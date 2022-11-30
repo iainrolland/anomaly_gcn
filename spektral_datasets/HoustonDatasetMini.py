@@ -36,7 +36,7 @@ class HoustonDatasetMini(GeneralDataset):
         return os.path.isfile(os.path.join(self.path, self.split_fname))
 
     def make_splits(self):
-        splits = make_splits(ground_truth.data.array[0][:, 1800:3600],
+        splits = make_splits(ground_truth.data().array[0][:, 1800:3600],
                              self.seed,
                              self.train_ratio,
                              self.val_ratio)
@@ -44,7 +44,7 @@ class HoustonDatasetMini(GeneralDataset):
         return splits
 
     def download(self):
-        gt = ground_truth.data.array[0]
+        gt = ground_truth.data().array[0]
         y = gt[:, 1800:3600].reshape(-1, 1)  # crops the data in horizontal direction (hence `Mini')
         x = np.concatenate([rgb.training_array(), hyperspectral.training_array(), lidar.training_array()])
         x = x[:, :, 1800:3600]  # crops the data in horizontal direction

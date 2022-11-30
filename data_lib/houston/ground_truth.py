@@ -12,4 +12,6 @@ class GroundTruth:
         self.array = tif.read()
 
 
-data = GroundTruth()
+def data():
+    return GroundTruth()
+
