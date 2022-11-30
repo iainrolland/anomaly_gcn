@@ -58,11 +58,11 @@ Contains the data loading functionality for each of the associated datasets. Not
 ### `spektral_datasets` - package
 Interfaces between the data loaded by `data_lib` package and the `spektral` library. In `spektral_datasets/__init__.py` there is a `get_dataset()` function. This shows the valid `data` values for `params.json` settings i.e.:
 * "AirQuality"
-* BeirutDataset"
+* "BeirutDataset"
 * "HaitiDamage"
 * "HoustonDatasetMini"
 * "LondonTimeSeries"
-* "SoilMoisture
+* "SoilMoisture"
 ### `experiments` - directory
 Specific folder for storing each experiment. Each experiment should be given its own folder with its own `params.json` file. See `experiments/LondonTimeSeries/demo_S-BGCN-T` for an example of how one might construct an experiment. Values in `experiments/LondonTimeSeries/demo_S-BGCN-T/params.json` can be adjusted to control experiment settings.
 ### `params.json` files
@@ -77,7 +77,7 @@ A parameters `.json` should always be named `params.json` and will have a subset
 	* "S-BGCN-T-K"
 	* "S-BMLP"
 	* "AE"
-	* "DPN-RS
+	* "DPN-RS"
 * `gpu_list`: if your machine has GPUs, you can specify which to use here with `[]` representing no GPUs, `[0]` denoting the first GPU should be used etc.
 * `seed`: random seed for experiment (affects train/validation/test splits as well as model weight initialisations etc.)
 * `k`: number of neighbours used when computing k-nearest neighbours graph
