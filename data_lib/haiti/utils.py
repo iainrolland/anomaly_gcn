@@ -27,7 +27,7 @@ def normalize(x, y):
 
 
 def make_splits(y, seed, train_ratio, val_ratio):
-    """buildings divided at random - labels have Green/Yellow/Red labe (0, 1, 2) or 'None' (row of zeros)"""
+    """buildings divided at random - labels have Green/Yellow/Red label (0, 1, 2) or 'None' (row of zeros)"""
     np.random.seed(seed)
     numb = y.shape[0]
     splits = np.array(["empty"] * numb)
