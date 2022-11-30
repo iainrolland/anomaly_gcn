@@ -1,0 +1,1 @@
+DATA_DIR = "/YOUR_PATH_HERE/AI4EO Air Quality Data"
